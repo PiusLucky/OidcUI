@@ -31,9 +31,9 @@ render(
       <Route path='/home' element={<PrivateRoute/>}>
         <Route path='/home' element={<Home/>}/>
       </Route>
-      <Route path='/profile' element={<PrivateRoute/>}>
-        <Route path='/profile' element={<Profile/>}/>
-      </Route>
+      // <Route path='/profile' element={<PrivateRoute/>}>
+      <Route path='/profile' element={<Profile/>}/>
+      // </Route>
       <Route path="*" element={<PageNotFound />} />
     </Routes>
     </AuthProvider>
