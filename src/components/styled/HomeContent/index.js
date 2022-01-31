@@ -1,8 +1,6 @@
 import React from "react";
 import { StyledArticleSection } from "./index.styled";
 import IllustrationGrowTogether from "../../svgs/IllustrationGrowTogether";
-import IllustrationFlowingConversations from "../../svgs/IllustrationFlowingConversations";
-import IllustrationsYourUsers from "../../svgs/IllustrationsYourUsers";
 import { StyledButton } from "../Button/Button.styled";
 import { useAuth } from 'oidc-react';
 import { Link } from "react-router-dom";

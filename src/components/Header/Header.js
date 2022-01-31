@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import Logo from "../svgs/Logo";
 import IllustrationMockups from "../svgs/IllustrationMockups";
 import { StyledHeader } from "./Header.styled";
@@ -9,7 +9,6 @@ import { useAuth } from 'oidc-react';
 function Header() {
   const auth = useAuth();
   const user = auth?.userData
-  console.log(user);
   return (
     <StyledHeader>
       <nav>

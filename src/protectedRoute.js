@@ -1,6 +1,6 @@
 import React from 'react';
 import { Navigate, Outlet, useLocation } from 'react-router-dom';
-import { useAuth, isLoading } from 'oidc-react';
+import { useAuth } from 'oidc-react';
 
 // No Need for this ::: "isLoading" will help us handle "null "
 // Since data from oidc usually delay a little bit before populating

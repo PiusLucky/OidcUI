@@ -15,7 +15,7 @@ import { AuthProvider } from 'oidc-react';
 import PrivateRoute from './protectedRoute';
 
 import oidcConfig from './config'
-import { Navigate, Outlet } from 'react-router-dom';
+
 const PageNotFound = () => <div>Page not found</div>;
 
 
@@ -27,13 +27,10 @@ render(
   <AuthProvider {...oidcConfig}>
     <Routes>
       <Route exact path="/" element={<App />}></Route>
-      // <Route path="/oauth-callback" element={<App />} />
       <Route path='/home' element={<PrivateRoute/>}>
         <Route path='/home' element={<Home/>}/>
       </Route>
-      // <Route path='/profile' element={<PrivateRoute/>}>
       <Route path='/profile' element={<Profile/>}/>
-      // </Route>
       <Route path="*" element={<PageNotFound />} />
     </Routes>
     </AuthProvider>
