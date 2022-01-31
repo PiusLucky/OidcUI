@@ -1,17 +1,44 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
 import App from './App';
-import reportWebVitals from './reportWebVitals';
+import Profile from './pages/Profile';
+import Home from './pages/Home';
+import { render } from "react-dom";
+import {
+  BrowserRouter,
+  Routes,
+  Route
+} from "react-router-dom";
+import { ThemeProvider } from "styled-components";
+import { GlobalStyle } from "./components/Global.styled";
+import theme from "./theme";
+import { AuthProvider } from 'oidc-react';
+import PrivateRoute from './protectedRoute';
 
-ReactDOM.render(
+import oidcConfig from './config'
+import { Navigate, Outlet } from 'react-router-dom';
+const PageNotFound = () => <div>Page not found</div>;
+
+
+render(
   <React.StrictMode>
-    <App />
+  <ThemeProvider theme={theme}>
+    <GlobalStyle />
+  <BrowserRouter>
+  <AuthProvider {...oidcConfig}>
+    <Routes>
+      <Route exact path="/" element={<App />}></Route>
+      // <Route path="/oauth-callback" element={<App />} />
+      <Route path='/home' element={<PrivateRoute/>}>
+        <Route path='/home' element={<Home/>}/>
+      </Route>
+      <Route path='/profile' element={<PrivateRoute/>}>
+        <Route path='/profile' element={<Profile/>}/>
+      </Route>
+      <Route path="*" element={<PageNotFound />} />
+    </Routes>
+    </AuthProvider>
+  </BrowserRouter>
+  </ThemeProvider>
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById("root")
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
