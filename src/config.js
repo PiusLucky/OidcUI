@@ -1,3 +1,4 @@
+// In a normal production setting, this details will be saved in .env (or environment variable)
 const oidcConfig = {
   onSignIn: async (user) => {
     window.location = '/home';
