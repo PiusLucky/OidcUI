@@ -12,7 +12,7 @@ const oidcConfig = {
   redirectUri: 'https=//oidc-ui.vercel.app/oauth-callback',
   scope: 'openid email profile'
 
-  //sewcure version
+  //secure version
   // authority: process.env.REACT_APP_AUTHORITY,
   // clientId: process.env.REACDT_APP_CLIENT_ID,
   // redirectUri: `${process.env.REACT_APP_DOMAIN}/${process.env.REACT_APP_REDIRECT_URI}`,
