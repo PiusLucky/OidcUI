@@ -1,6 +1,12 @@
 # OidcUI
 A test app to explore some features of OpenID Connect, a simple identity layer on top of the OAuth 2.0 protocol. It allows Clients to verify the identity of the End-User based on the authentication performed by an Authorization Server, as well as to obtain basic profile information about the End-User in an interoperable and REST-like manner.  OpenID Connect allows clients of all types, including Web-based, mobile, and JavaScript clients, to request and receive information about authenticated sessions and end-users. The specification suite is extensible, allowing participants to use optional features such as encryption of identity data, discovery of OpenID Providers, and session management, when it makes sense for them.
 
+## 🚧 Caution: 
+This App wasn't hosted because the callback URI provided is already preconfigured for http://localhost:3000/oauth-callback, http://localhost:3000/callback
+
+![1a](https://user-images.githubusercontent.com/32282934/151813147-ed33b754-2802-4caa-97dc-3db13fdac027.png)
+
+
 ## Landing Page
 ![1](https://user-images.githubusercontent.com/32282934/151782993-d67b739a-e207-4c50-b020-4c43ae3c769b.png)
 
