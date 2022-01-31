@@ -9,7 +9,7 @@ const oidcConfig = {
   autoSignIn: false,
   authority: 'https://id-sandbox.cashtoken.africa/.well-known/openid-configuration',
   clientId: 'wprQYMZBqqx-dgszFUfQG',
-  redirectUri: 'http://localhost:3000/oauth-callback',
+  redirectUri: 'https=//oidc-ui.vercel.app/oauth-callback',
   scope: 'openid email profile'
 
   //sewcure version
