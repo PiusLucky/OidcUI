@@ -13,11 +13,13 @@ function App() {
       <Header />
        <aside className="profile-card">
   <header>
-    <img
-      src="https://robohash.org/c6df340b42802a610beb6a029d1af0c0?set=set4&bgset=&size=200x200"
-      className="hoverZoomLink"
-      alt="little bluish cat"
-    />
+    <a href="https://robohash.org/c6df340b42802a610beb6a029d1af0c0?set=set4&bgset=&size=200x200" target="_blank">
+      <img
+        src="https://robohash.org/c6df340b42802a610beb6a029d1af0c0?set=set4&bgset=&size=200x200"
+        className="hoverZoomLink"
+        alt="little bluish cat"
+      />
+    </a>
     <h1>{user?.username}</h1>
     <h2>{user?.display_name}</h2>
   </header>
