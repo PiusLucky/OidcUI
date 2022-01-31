@@ -9,6 +9,14 @@ function App() {
   const auth = useAuth();
   const user = auth?.userData?.profile
   console.log(user);
+  if(!user) {
+  return (
+    <div className="appContainer">
+        <Header />
+        <Footer />
+      </div>
+  )
+  }
   return (
     <div className="appContainer">
       <Header />

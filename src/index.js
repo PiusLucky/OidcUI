@@ -26,14 +26,10 @@ render(
   <BrowserRouter>
   <AuthProvider {...oidcConfig}>
     <Routes>
-      <Route exact path="/" element={<App />}></Route>
-      // <Route path="/oauth-callback" element={<App />} />
-      <Route path='/home' element={<PrivateRoute/>}>
-        <Route path='/home' element={<Home/>}/>
-      </Route>
-      <Route path='/profile' element={<PrivateRoute/>}>
-        <Route path='/profile' element={<Profile/>}/>
-      </Route>
+      <Route exact path="/" element={<App />} />
+      <Route path="/oauth-callback" element={<App />} />
+      <Route path='/home' element={<Home/>}/>
+      <Route path='/profile' element={<Profile/>}/>
       <Route path="*" element={<PageNotFound />} />
     </Routes>
     </AuthProvider>
