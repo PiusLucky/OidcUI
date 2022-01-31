@@ -27,6 +27,7 @@ render(
   <AuthProvider {...oidcConfig}>
     <Routes>
       <Route exact path="/" element={<App />}></Route>
+      <Route exact path="/oauth-callback" element={<App />}></Route>
       <Route path='/home' element={<PrivateRoute/>}>
         <Route path='/home' element={<Home/>}/>
       </Route>
