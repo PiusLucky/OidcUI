@@ -9,7 +9,6 @@ import { useAuth } from 'oidc-react';
 function Header() {
   const auth = useAuth();
   const user = auth?.userData
-  console.log(user);
   return (
     <StyledHeader>
       <nav>

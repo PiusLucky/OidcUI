@@ -1,3 +1,4 @@
+// All config must be stored in environment variables in Production
 const oidcConfig = {
   onSignIn: async (user) => {
     window.location = '/home';

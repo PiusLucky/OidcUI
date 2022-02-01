@@ -12,7 +12,7 @@ import { ThemeProvider } from "styled-components";
 import { GlobalStyle } from "./components/Global.styled";
 import theme from "./theme";
 import { AuthProvider } from 'oidc-react';
-import PrivateRoute from './protectedRoute';
+import PrivateRoutes from './protectedRoute';
 
 import oidcConfig from './config'
 import { Navigate, Outlet } from 'react-router-dom';
@@ -28,8 +28,10 @@ render(
     <Routes>
       <Route exact path="/" element={<App />} />
       <Route path="/oauth-callback" element={<App />} />
-      <Route path='/home' element={<Home/>}/>
-      <Route path='/profile' element={<Profile/>}/>
+      <Route element={<PrivateRoutes />}>
+        <Route path='/home' element={<Home/>}/>
+        <Route path='/profile' element={<Profile/>}/>
+      </Route>
       <Route path="*" element={<PageNotFound />} />
     </Routes>
     </AuthProvider>
