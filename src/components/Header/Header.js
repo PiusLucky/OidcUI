@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import Logo from "../svgs/Logo";
 import IllustrationMockups from "../svgs/IllustrationMockups";
 import { StyledHeader } from "./Header.styled";

@@ -13,9 +13,9 @@ import { GlobalStyle } from "./components/Global.styled";
 import theme from "./theme";
 import { AuthProvider } from 'oidc-react';
 import PrivateRoutes from './protectedRoute';
-
 import oidcConfig from './config'
-import { Navigate, Outlet } from 'react-router-dom';
+
+
 const PageNotFound = () => <div>Page not found</div>;
 
 
