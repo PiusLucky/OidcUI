@@ -17,4 +17,4 @@ This App wasn't hosted because the callback URI provided is already preconfigure
 ## Home
 ![4](https://user-images.githubusercontent.com/32282934/151783017-d1e969a3-988c-4b36-9583-0688d9cbd46f.png)
 ## Profile
-![5](https://user-images.githubusercontent.com/32282934/151783026-eaab4956-411e-4aeb-858a-06bc33779a35.png)
+![profile](https://user-images.githubusercontent.com/32282934/151895031-bfc19fec-473f-4b42-a4bd-86b9cf14dda1.png)
